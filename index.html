@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sable Lamb LLC</title>
     <style>
-        
         body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
-            background-color: #FEF9E7; 
-            color: #4A4A4A; /* Warm dark gray text for readability */
+            background-color: #FEF9E7;
+            color: #4A4A4A;
             line-height: 1.6;
         }
         header {
-            background-color: #F5E6D3; 
+            background-color: #F5E6D3;
             padding: 60px 20px;
             text-align: center;
             border-bottom: 1px solid #E8D9C2;
@@ -29,7 +28,7 @@
         h2 {
             font-size: 2rem;
             color: #555;
-            margin-top: 0;
+            margin-top: 20px;
         }
         .container {
             max-width: 900px;
@@ -69,10 +68,15 @@
         }
         footer {
             background-color: #F5E6D3;
-            padding: 40px 20px;
+            padding: 60px 20px 40px;
             text-align: center;
             font-size: 0.9rem;
             border-top: 1px solid #E8D9C2;
+        }
+        .footer-logo {
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 30px;
         }
         a {
             color: #6B5E4A;
@@ -84,8 +88,8 @@
         @media (max-width: 768px) {
             h1 { font-size: 2.8rem; }
             .apps-section { flex-direction: column; align-items: center; }
+            .footer-logo { max-width: 200px; }
         }
-
         /* Modal Styles */
         .modal {
             display: none;
@@ -173,6 +177,7 @@
     </div>
 
     <footer>
+        <img src="logo.png" alt="Sable Lamb LLC Logo" class="footer-logo">
         <p>&copy; 2026 Sable Lamb LLC. All rights reserved.</p>
         <div class="footer-links">
             <a href="#" id="open-privacy">Privacy Policy</a> |
@@ -219,11 +224,9 @@
     </div>
 
     <script>
-        
         const privacyModal = document.getElementById('privacy-modal');
         const openPrivacy = document.getElementById('open-privacy');
         const closePrivacy = document.getElementById('close-privacy');
-
         openPrivacy.onclick = function(e) {
             e.preventDefault();
             privacyModal.style.display = 'flex';
@@ -232,11 +235,9 @@
             privacyModal.style.display = 'none';
         }
 
-       
         const termsModal = document.getElementById('terms-modal');
         const openTerms = document.getElementById('open-terms');
         const closeTerms = document.getElementById('close-terms');
-
         openTerms.onclick = function(e) {
             e.preventDefault();
             termsModal.style.display = 'flex';
@@ -245,7 +246,6 @@
             termsModal.style.display = 'none';
         }
 
-        
         window.onclick = function(event) {
             if (event.target === privacyModal) {
                 privacyModal.style.display = 'none';
@@ -256,5 +256,4 @@
         }
     </script>
 </body>
-
 </html>
